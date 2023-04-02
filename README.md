@@ -14,3 +14,6 @@ npm run serve
 ```
 npm run build
 ```
+
+
+The backend works on port 8080
