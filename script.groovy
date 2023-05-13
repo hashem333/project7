@@ -12,8 +12,8 @@ def buildDockerImage() {
 		}
 }
 def deployDockerImage() {
-	sh "ssh hashem@127.0.0.1 docker pull hashem333/my-docker-repo:project7-new-1.0"
-	sh "ssh hashem@127.0.0.1 docker run --rm -dt -p 8088:8088 --name project7 hashem333/my-docker-repo:project7-new-1.0"
+	sh "ssh hashem@172.17.0.1 docker pull hashem333/my-docker-repo:project7-new-1.0"
+	sh "ssh hashem@172.17.0.1 docker run --rm -dt -p 8088:8088 --name project7 hashem333/my-docker-repo:project7-new-1.0"
 }
 
 return this
