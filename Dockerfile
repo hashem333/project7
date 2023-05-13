@@ -21,7 +21,7 @@ COPY backend.py /home/app
 
 RUN cd /home/app && pip install --no-cache-dir -r requirments.txt
 
-EXPOSE 8080
+EXPOSE 8088
 
 WORKDIR /home/app
 
