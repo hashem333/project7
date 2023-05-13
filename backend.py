@@ -27,4 +27,4 @@ def serve_css(filename):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=DEBUG)
+    app.run(host='0.0.0.0', port=8088, debug=DEBUG)
