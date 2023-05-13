@@ -6,7 +6,7 @@ def buildDockerImage() {
 	withCredentials([usernamePassword(credentialsId: 'my-dockerhub-repo', usernameVariable: 'USER', passwordVariable: 'PASS')])
 	{
 		sh "docker build -t 172.18.0.2:8085/my-docker-repo/project7-new:1.0 ."
-		sh "echo $PASS | docker login -u $USER --password-stdin"
+		sh "echo $PASS | docker login 172.18.0.2:8085 -u $USER --password-stdin"
 		sh "docker push 172.18.0.2:8085/my-docker-repo/project7-new:1.0"
 		sh "docker rmi 172.18.0.2:8085/my-docker-repo/project7-new:1.0 --force" 
 		}
